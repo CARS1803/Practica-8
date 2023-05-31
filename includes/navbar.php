@@ -11,7 +11,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
+                        Clientes
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
