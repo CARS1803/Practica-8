@@ -1,10 +1,10 @@
 <?php
-require '../../modelos/Producto.php';
+require '../../modelos/Cliente.php';
 
 
     try {
-        $producto = new Producto($_GET);
-        $resultado = $producto->eliminar();
+        $cliente = new Cliente($_GET);
+        $resultado = $cliente->eliminar();
 
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -13,12 +13,6 @@ require '../../modelos/Producto.php';
     }
 
 
-
-// if($resultado){
-//     echo "Guardado exitosamente";
-// }else{
-//     echo "Ocurrió un error: $error";
-// }
 
 ?>
 <!DOCTYPE html>
@@ -48,7 +42,7 @@ require '../../modelos/Producto.php';
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/crudphp18may2023/controladores/productos/buscar.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/Practica-8/controladores/clientes/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
