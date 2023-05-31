@@ -1,14 +1,14 @@
 <?php
-require '../../modelos/Producto.php';
+require '../../modelos/Cliente.php';
 
 
-if($_POST['producto_nombre'] != '' && $_POST['producto_precio']  != '' && $_POST['producto_id'] != ''){
+if($_POST['cliente_nombre'] != '' && $_POST['cliente_nit']  != '' && $_POST['cliente_id'] != ''){
 
 
 
     try {
-        $producto = new Producto($_POST);
-        $resultado = $producto->modificar();
+        $cliente = new Cliente($_POST);
+        $resultado = $cliente->modificar();
 
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -19,12 +19,6 @@ if($_POST['producto_nombre'] != '' && $_POST['producto_precio']  != '' && $_POST
     $error = "Debe llenar todos los datos";
 }
 
-
-// if($resultado){
-//     echo "Guardado exitosamente";
-// }else{
-//     echo "Ocurrió un error: $error";
-// }
 
 ?>
 <!DOCTYPE html>
@@ -54,7 +48,7 @@ if($_POST['producto_nombre'] != '' && $_POST['producto_precio']  != '' && $_POST
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/crudphp18may2023/controladores/productos/buscar.php?producto_nombre=<?= $_POST['producto_nombre'] ?>" class="btn btn-info">Volver al formulario</a>
+                <a href="/Practica-8/controladores/clientes/buscar.php?cliente_nombre=<?= $_POST['cliente_nombre'] ?>" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
